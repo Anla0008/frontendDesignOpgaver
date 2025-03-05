@@ -1,16 +1,52 @@
 :root {
-    background: #E3EDFB;
+  background: #e3edfb;
 
-    --color-icon: #0B3A67;
+  --color-icon: #0b3a67;
 
-    --image-width: 8rem;
-    --card-padding: 1rem;
+  --image-width: 8rem;
+  --card-padding: 1rem;
 
-    --font-heading: 1.75rem;
+  --font-heading: 1.75rem;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+  --hide-overlay: 1;
 }
 
-
 /* Begynd her... */
+.profileCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  justify-self: auto;
+}
+.profilePic {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.info {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+}
+.info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.info p {
+  margin: 0;
+  color: #4adcd4;
+}
+.socials {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+}
+.socials img {
+  width: 24px;
+  height: 24px;
+}
