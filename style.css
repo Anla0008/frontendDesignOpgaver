@@ -1,4 +1,23 @@
-article {
-    max-width: 65ch;
-    margin-inline: auto;
+.grid_container {
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr
+    [breakout-start] 1fr
+    [content-start] min(65ch, 100%)
+    [content-end] 1fr
+    [breakout-end] 1fr
+    [full-end];
+}
+
+.content {
+  grid-column: content-start / content-end;
+}
+
+.citat {
+  grid-column: breakout-start / breakout-end;
+}
+
+.imgWrapper {
+  grid-column: full-start / full-end;
+  width: 100vw;
 }
