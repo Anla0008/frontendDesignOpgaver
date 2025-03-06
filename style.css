@@ -5,17 +5,17 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    "title image-1"
-    "list image-2"
-    "tag image-2";
+    "title cup"
+    "list man"
+    "tag man";
 
   /* For større skærme */
   @media (min-width: 800px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "title title image-1"
-      "list tag image-1"
-      "list image-2 image-2";
+      "title title cup"
+      "man list cup"
+      "man list tag";
   }
 }
 
@@ -23,11 +23,11 @@
 .title {
   grid-area: title;
 }
-.image-1 {
-  grid-area: image-1;
+.cup {
+  grid-area: cup;
 }
-.image-2 {
-  grid-area: image-2;
+.man {
+  grid-area: man;
 }
 .list {
   grid-area: list;
@@ -68,7 +68,7 @@
   --bg: var(--color-brand-coffee);
 }
 
-.image-1 {
+.cup {
   color: var(--color-text-accent);
 }
 
