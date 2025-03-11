@@ -14,39 +14,37 @@ const { cardContent } = Astro.props;
 </ul>
 
 <style>
+  :root {
+    --content-width: 600px;
+    --card-padding: 4rem;
+    --card-gap: 1rem;
+    --card-border-radius: 10px;
+    --card-background: #fff;
+    --card-text-color: #333;
+  }
+
   ul {
     list-style: none;
+
+    grid-column: 1 / -1;
+    scroll-snap-type: inline mandatory;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    padding-inline: max(10px, 40% - var(--content-width) / 2);
+    scroll-padding-inline-start: max(10px, 40% - var(--content-width) / 2);
+  }
+
+  ul li {
+    flex-basis: min(90%, 400px);
+    flex-shrink: 0;
+
+    scroll-snap-align: center;
+
+    padding: 1rem;
+    border-radius: var(--card-border-radius);
+    margin: 0.5rem;
+    background-color: #f7f7f7;
   }
 </style>
-
-<!-- 
-Skal sættes ind i index.astro (section delen)
-section{
-display:grid:
- grid-template-columns:1fr[] MANGLER ;
- 
- >*{
- grid-column:content;}
- }-->
-
-<!-- ul{
- grid-colummn:1/-1;
- scroll-snap-type:inline mandatory;
-display:flex; 
-overflow-x:auto;
-
-padding-inline:max(20px, 50% - var(--content-width) / 2);
-scroll-padding-inline-start:max(20px, 50% - var(--content-width) / 2);
-
-li{
-flex-basis:(90%, 400px);
-flex-shrink:0;
-
-scroll-snap-align:center;
-
-padding:1rem;
-border:1px solid #ccc;
-margin:0.5rem;
-background-color:#f7f7f7;
-}
-} -->
